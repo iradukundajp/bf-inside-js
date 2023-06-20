@@ -14,7 +14,11 @@
  * @example
  * addANumber([-2, -1, 0, 1], 1); // [-1, 0, 1, 2]
  */
-const addANumber = () => {};
+
+const addANumber = (numbers = [], addMe = 0) => {
+  const newArray = numbers.map((num) => num + addMe);
+  return newArray;
+};
 
 describe('addANumber: adds a given number to each number in an array', () => {
   describe('the function adds to each entry:', () => {
@@ -58,10 +62,18 @@ describe('addANumber: adds a given number to each number in an array', () => {
   });
   describe('there are no side-effects', () => {
     it('returns a new array', () => {
-      writeThisTest;
+      const numbers = [-2, -1, 0, 1, 2];
+      const original = [...numbers]; // Create a shallow copy using spread operator
+      const actual = addANumber(numbers, 5);
+      expect(actual).toEqual([-2, -1, 0, 1, 2]);
+      expect(actual).not.toBe(numbers); // Check if a new array is returned
     });
+
     it('does not modify the original array', () => {
-      writeThisTest;
+      const numbers = [-2, -1, 0, 1, 2];
+      const original = [...numbers]; // Create a shallow copy using spread operator
+      const actual = addANumber(numbers, 5);
+      expect(numbers).toEqual(original); // Check if the original array is unmodified
     });
   });
 });
