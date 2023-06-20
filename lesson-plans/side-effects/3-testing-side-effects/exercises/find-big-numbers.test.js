@@ -14,8 +14,9 @@
  * @example
  * findBigNumbers([-2, -1, 0, 1, 2], 0); // [0, 1, 2]
  */
-const findBigNumbers = () => {};
-
+const findBigNumbers = (numbers = [], big = 0) => {
+  return numbers.filter((number) => number >= big);
+};
 describe('findBigNumbers: finds all the big numbers in an array', () => {
   describe('the function finds big numbers:', () => {
     it('in a sorted array', () => {
@@ -52,10 +53,18 @@ describe('findBigNumbers: finds all the big numbers in an array', () => {
   });
   describe('there are no side-effects', () => {
     it('returns a new array', () => {
-      writeThisTest;
+      const numbers = [-2, -1, 0, 1, 2];
+      const original = [...numbers]; // Create a shallow copy using spread operator
+      const actual = findBigNumbers(numbers, 0);
+      expect(actual).toEqual([0, 1, 2]);
+      expect(actual).not.toBe(numbers); // Check if a new array is returned
     });
+
     it('does not modify the original array', () => {
-      writeThisTest;
+      const numbers = [-2, -1, 0, 1, 2];
+      const original = [...numbers]; // Create a shallow copy using spread operator
+      const actual = findBigNumbers(numbers, 0);
+      expect(numbers).toEqual(original); // Check if the original array is unmodified
     });
   });
 });
