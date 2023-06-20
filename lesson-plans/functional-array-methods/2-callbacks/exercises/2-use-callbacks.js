@@ -20,8 +20,18 @@ const isEven = (x = 0) => {
  * @param {Function} cb - What to check for.
  * @returns {string} "neither", "one" or "both"
  */
-const checkThem = () => {};
+const checkThem = (num1 = 0, num2 = 0, cb) => {
+  const isNum1True = cb(num1);
+  const isNum2True = cb(num2);
 
+  if (!isNum1True && !isNum2True) {
+    return 'neither';
+  } else if (isNum1True && isNum2True) {
+    return 'both';
+  } else {
+    return 'one';
+  }
+};
 // --- test your function ---
 
 const check1 = checkThem(1, 2, isGreaterThanFive);
@@ -30,7 +40,7 @@ console.assert(check1 === 'neither', 'Test 1');
 const check2 = checkThem(6, 5, isGreaterThanFive);
 console.assert(check2 === 'one', 'Test 2');
 
-const check3 = checkThem(1, 2, isGreaterThanFive);
+const check3 = checkThem(11, 10, isGreaterThanFive);
 console.assert(check3 === 'both', 'Test 3');
 
 const check4 = checkThem(1, 5, isEven);
