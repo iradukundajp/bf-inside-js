@@ -1,11 +1,13 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 /**
+ * Skip characters in a given text based on a specified interval.
  *
+ * @param {string} [text=''] - The text to skip characters from.
+ * @param {number} [toSkip=1] - The interval at which characters should be skipped.
+ * @returns {string} - The modified text with skipped characters.
  */
 const skipCharacters = (text = '', toSkip = 1) => {
   if (toSkip < 1) {

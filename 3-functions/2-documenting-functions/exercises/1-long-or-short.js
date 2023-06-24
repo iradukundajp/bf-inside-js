@@ -1,15 +1,14 @@
-// #todo
 
 'use strict';
 
 console.log('-- begin --');
 
 /**
- * _
+ * check if the text is long or short
  *
- * @_ {_} [_=_] - _
- * @_ {_} [_=_] - _
- * @_ {_} _
+ * @parameter {string} [text = ''] - the string to check
+ * @parameter {number } [cutoff = 0] - the number of characters
+ * @return  {string } _ short or long
  */
 const longOrShort = (text = '', cutoff = 0) => {
   if (text.length < cutoff) {
