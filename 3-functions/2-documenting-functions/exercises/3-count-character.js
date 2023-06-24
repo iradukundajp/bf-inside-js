@@ -1,11 +1,13 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 /**
+ * Count the number of occurrences of a specific character in a given text.
  *
+ * @param {string} [text=''] - The text to count characters in.
+ * @param {string} [toCount=''] - The character to count.
+ * @return {number} - The count of occurrences of the character in the text.
  */
 const countCharacter = (text = '', toCount = '') => {
   if (toCount.length !== 1) {

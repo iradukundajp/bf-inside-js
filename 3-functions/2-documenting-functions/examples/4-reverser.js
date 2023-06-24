@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -11,11 +9,7 @@ console.log('-- begin --');
  * @returns {string} The original string, backwards.
  */
 const reverser = (text = '') => {
-  let reversedText = '';
-  for (let i = text.length - 1; i >= 0; i--) {
-    reversedText += text[i];
-  }
-  return reversedText;
+  return text.split('').reverse().join('');
 };
 
 const _1_expected = 'eert';
