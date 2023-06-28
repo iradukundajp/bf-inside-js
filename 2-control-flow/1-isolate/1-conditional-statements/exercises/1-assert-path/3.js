@@ -1,10 +1,8 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
-// are there any unreachable paths?
+// are there any unreachable paths? No
 
 const value1 = 100;
 const value2 = -100;
@@ -18,6 +16,6 @@ if (value1 === value2) {
   path = 'else if 2';
 }
 
-console.assert(path === _);
+console.assert(path === 'else if 1');
 
 console.log('-- end --');

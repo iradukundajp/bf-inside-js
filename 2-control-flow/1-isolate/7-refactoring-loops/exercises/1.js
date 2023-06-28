@@ -1,21 +1,26 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 const school = 'HackYourFuture';
 
+// for...of loop
 for (const letter of school) {
   console.log(letter);
 }
 
-// write this for...of loop as a for loop:
+// converted to for loop
+for (let i = 0; i < school.length; i++) {
+  const letter = school[i];
+  console.log(letter);
+}
 
-for (_; _; _) {}
-
-// write this for loop as a while loop:
-
-while (_) {}
+// converted to while loop
+let i = 0;
+while (i < school.length) {
+  const letter = school[i];
+  console.log(letter);
+  i++;
+}
 
 console.log('-- end --');

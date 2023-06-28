@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -20,7 +18,7 @@ console.log('-- begin --');
 */
 
 // try changing this variable's value and see what happens
-const value = 123;
+const value = true;
 // const value = '123';
 // const value = true;
 // const value = undefined;

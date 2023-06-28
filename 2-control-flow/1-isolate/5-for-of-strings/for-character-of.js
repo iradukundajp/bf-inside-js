@@ -9,7 +9,7 @@ console.log('-- begin --');
   the new variable will be block scoped inside the loop
 */
 
-const color = 'red';
+const color = 'blue';
 // const color = 'orange';
 // const color = 'yellow';
 // const color = 'green';
