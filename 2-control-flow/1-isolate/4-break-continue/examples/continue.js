@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -12,7 +10,7 @@ console.log('-- begin --');
 
 */
 
-const max = 0;
+const max = 8;
 // const max = 1;
 // const max = 2;
 // const max = 3;

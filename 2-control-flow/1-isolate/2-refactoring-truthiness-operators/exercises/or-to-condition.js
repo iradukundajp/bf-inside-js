@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -7,11 +5,18 @@ console.log('-- begin --');
 // refactor this code to use a condition instead of ||
 
 // try different values and different types
-const firstName = _;
-const lastName = _;
+const firstName = 'Anne';
+const lastName = 'Marie';
 console.log(firstName, lastName);
+let hasAnAName;
+if (firstName[0] === 'A') {
+  hasAnAName = true;
+} else if (lastName[0] === 'A') {
+  hasAnAName = true;
+} else {
+  hasAnAName = false;
+}
 
-const hasAnAName = firstName[0] === 'A' || lastName[0] === 'A';
 console.log(hasAnAName);
 
 console.log('-- end --');

@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -14,14 +12,9 @@ const value1 = '';
 const value2 = -1;
 let path = '';
 
-if (_) {
+if (value1 || value2) {
   path = 'if';
-} else if (_) {
-  path = 'else if';
-} else {
-  path = 'else';
+} else if (value2 && value1) {
+  console.assert(path === 'if', 'path should be "if"');
 }
-
-console.assert(path === 'if', 'path should be "if"');
-
 console.log('-- end --');
