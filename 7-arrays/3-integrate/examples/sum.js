@@ -1,5 +1,3 @@
-// #todo
-
 import { addNumbers } from './utils/add-numbers.js';
 
 alert(
