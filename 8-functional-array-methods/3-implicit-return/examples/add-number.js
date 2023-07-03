@@ -1,8 +1,9 @@
-// #todo
-
-/**
+/*
+ * Adds a number to each element in an array of numbers.
  *
- *
+ * @param {number[]} nums - The array of numbers.
+ * @param {number} addThis - The number to add to each element.
+ * @returns {number[]} An array where each element is the sum of the corresponding number from nums and addThis.
  */
 
 // // before
